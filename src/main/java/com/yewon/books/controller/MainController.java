@@ -23,6 +23,4 @@ public class MainController {
         log.info("index" + pageRequestDTO);
         model.addAttribute("result", booksService.getList(pageRequestDTO));
     }
-
-
 }

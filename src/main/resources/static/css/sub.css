@@ -5,3 +5,5 @@
 .books-img { width: 200px; height: 200px; }
 .books-box { vertical-align: middle; }
 .books-cont { display: table-cell; vertical-align: middle; }
+.books-cont li {margin-bottom: 10px;}
+.books-title {font-weight: 600; font-size: 20px; color: #000;}

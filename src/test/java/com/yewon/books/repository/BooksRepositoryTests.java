@@ -21,6 +21,7 @@ public class BooksRepositoryTests {
                     .author("author" + i)
                     .iso("iso" + i)
                     .publisher("publisher" + i)
+                    .publishYear(i)
                     .build();
 
             booksRepository.save(booksInfo);

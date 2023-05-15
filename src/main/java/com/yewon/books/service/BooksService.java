@@ -16,6 +16,9 @@ public interface BooksService {
                 .imgPath(booksInfo.getImgPath())
                 .iso(booksInfo.getIso())
                 .publisher(booksInfo.getPublisher())
+                .regDate(booksInfo.getRegDate())
+                .modDate(booksInfo.getModDate())
+                .publishYear(booksInfo.getPublishYear())
                 .build();
         return booksInfoDTO;
     }

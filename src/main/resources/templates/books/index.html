@@ -11,7 +11,7 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <colgroup>
                             <col style="width:20%;">
                             <col style="width:50%;">
@@ -26,11 +26,9 @@
                                 </td>
                                 <td class="books-box">
                                     <div class="books-cont">
-                                        <p>[[${dto.bno}]]</p>
-                                        <p>제목</p>
-                                        <p>제목</p>
-                                        <p>제목</p>
-                                        <p>제목</p>
+                                        <li class="books-title">[[${dto.title}]]</li>
+                                        <li>저자 : [[${dto.author}]]</li>
+                                        <li>출판사 : [[${dto.publisher}]] | 발행년 : [[${dto.publishYear}]] | 청구번호 : [[${dto.iso}]]</li>
                                     </div>
                                 </td>
                                 <td class="books-box">
@@ -45,6 +43,20 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <ul class="pagination h-100 justify-content-center align-items-center">
+                        <li class="page-item" th:if="${result.prev}">
+                            <a class="page-link" href="#" tabindex="-1" th:href="@{/books/index(page=${result.start-1})}">Previous</a>
+                        </li>
+                        <li th:class=" 'page-item ' + ${result.page == page ? 'active' : ''}" th:each="page : ${result.pageList}">
+                            <a class="page-link" th:href="@{/books/index(page=${page})}">
+                                [[${page}]]
+                            </a>
+                        </li>
+                        <li class="page-item" th:if="${result.next}">
+                            <a class="page-link" href="#" tabindex="-1" th:href="@{/books/index(page=${result.end+1})}">Next</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </th:block>

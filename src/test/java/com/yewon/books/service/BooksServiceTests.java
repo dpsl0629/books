@@ -24,7 +24,12 @@ public class BooksServiceTests {
         System.out.println("prev" + result.isPrev());
         System.out.println("next" + result.isNext());
         System.out.println("totalPage " + result.getTotalPage());
+        System.out.println("totalPage " + result.getEnd());
+        System.out.println("page " + result.getPage());
 
+        int tempEnd = (int)(Math.ceil(result.getPage() / 10.0)) * 10;
+
+        System.out.println("tempEnd" + tempEnd);
         System.out.println("-------------------------");
         for (BooksInfoDTO booksInfoDTO : result.getDtoList()) {
             System.out.println(booksInfoDTO);

@@ -26,4 +26,6 @@ public class BooksInfo extends BaseEntity {
     private String publisher;
 
     private String imgPath;
+
+    private int publishYear;
 }
