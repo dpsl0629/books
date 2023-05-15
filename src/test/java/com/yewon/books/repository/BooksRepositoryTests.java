@@ -17,7 +17,6 @@ public class BooksRepositoryTests {
     public void insert() {
         IntStream.rangeClosed(1, 100).forEach(i -> {
             BooksInfo booksInfo = BooksInfo.builder()
-                    .bno((long) i)
                     .title("test" + i)
                     .author("author" + i)
                     .iso("iso" + i)

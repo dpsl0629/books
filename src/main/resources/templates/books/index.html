@@ -18,20 +18,30 @@
                             <col style="width:30%;">
                         </colgroup>
                         <tbody>
-                            <tr>
+                            <tr th:each="dto : ${result.dtoList}">
                                 <td>
                                     <div>
                                         <img src="/img/sample.jpg" class="books-img">
                                     </div>
                                 </td>
-                                <td>
-                                    <p>제목</p>
-                                    <p>제목</p>
-                                    <p>제목</p>
-                                    <p>제목</p>
-                                    <p>제목</p>
+                                <td class="books-box">
+                                    <div class="books-cont">
+                                        <p>[[${dto.bno}]]</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                    </div>
                                 </td>
-                                <td>대출하기</td>
+                                <td class="books-box">
+                                    <div class="books-cont">
+                                        <p>[[${dto.bno}]]</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                        <p>제목</p>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

@@ -24,4 +24,6 @@ public class BooksInfo extends BaseEntity {
     private String iso;
 
     private String publisher;
+
+    private String imgPath;
 }
